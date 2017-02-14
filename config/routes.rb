@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :timelines
+  resources :timelines do
+    collection do
+      post 'filter_by_user'
+    end
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

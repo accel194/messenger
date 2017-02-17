@@ -31,9 +31,3 @@ is_reply = false if is_reply.nil?
 <% t.replies.each do |r| %>
   <%= render 'timelines/timeline', t: r, is_reply: true %>
 <% end %>
-
-<div class="timeline">
-  <% @timeline.each do |t| %>
-  
-  <% end %>
-</div>
